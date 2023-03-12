@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bg.png);
+    background-color: rgb(31, 31, 31);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    height: 100vh;
+}
+
+#img-container{
+    height:400px;
+    width:400px;
+    background-color:gray;
+    /* margin:40px auto; */
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    rotate:90deg;
+    opacity: 0.8;
+    position: relative;
+    top: 100px;
+    left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+#profile-pic{
+    rotate: -90deg;
+    width: 100%;
+    position: relative;
+    transform: scaleX(-1);
+    left: 0;
+    animation-name: profile-pic;
+    animation-duration: 4s;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+#name{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#main-text{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 99;
+    left: 40%;
+    top:-35%;
+    width: fit-content;
+    gap: 20px;
+}
+
+.main-texts:not(#header-3){
+    color: white;
+    font-weight: bold;
+}
+
+#header-1{
+    font-size: 120px;
+    letter-spacing: 5px;
+    width: fit-content;
+    text-shadow: 2px 2px 9px rgba(206,206,206,0.98);
+    animation-name: header-1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#header-2{
+    font-size: 60px;
+    letter-spacing: 30px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 2px 2px 9px rgba(206,206,206,0.44);
+}
+
+#header-3{
+    color: rgba(247, 247, 247, 0.774);
+    font-size: 50px;
+    width: fit-content;
+    margin-left: 10px;
+    font-weight: lighter;
+    text-shadow: 2px 2px 9px rgba(156,156,156,0.44);
+}
+
+
+#footer{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    top: -20%;
+    margin-left: 20px;
+}
+
+#footer-no{
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+#divider{
+    width: 60px;
+    height: 6px;
+    background-color: white;
+
+}
+
+#icons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 35%;
+    margin-left: 20px;
+}
+
+.link-icons{
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes profile-pic{
+    from{opacity: 0; width: 10px;}
+    to{opacity: 1; width: 100%;}
+}
+
+@keyframes header-1{
+    0%   {color: rgb(255, 255, 255); transform: translate(0,  0px);}
+  25%  {color: yellow; transform: translate(0, 5px);}
+  50%  {color: rgb(107, 107, 255); transform: translate(0, 10px);}
+  100% {color: rgb(29, 255, 29); transform: translate(0, -0px);}
+}
